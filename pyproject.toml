@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "python-rmi"
+version = "0.1.0"
+description = ""
+authors = ["Nicolas Vycas Nery <vycasnicolas@gmail.com>"]
+license = "mit"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Pyro5 = "^5.14"
+rich = "^13.6.0"
+pyro4 = "^4.82"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
