@@ -16,15 +16,15 @@ if uri == "":
     exit()
 
 # Create a Pyro proxy to the server object
-eval = Pyro4.Proxy(uri)
+calculatorRO = Pyro4.Proxy(uri)
 
 # Loop to get user input and call the server object
-entrada = ""
-while(entrada != "exit"):
+data_in = ""
+while(data_in != "exit"):
     rich.print("[bold green]Enter a math expression to evaluate or 'exit':[/bold green]")
-    entrada = input(">>> ",default="1+1")
-    if(entrada != "exit"):
-        print(f"{entrada} = {eval.eval(entrada)}")
+    data_in = input(">>> ",default="1+1")
+    if(data_in != "exit"):
+        print(f"{data_in} = {calculatorRO.eval(data_in)}")
 
 print("[bold red]Exiting...[/bold red]")
 
