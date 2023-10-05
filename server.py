@@ -12,6 +12,7 @@ class Calculator(object):
         # eval the data math expression
         try:
             result = eval(data)
+            print(f"[bold green]Evaluated {data} = {result}[/bold green]")
         except Exception as e:
             print(e)
         return result
@@ -23,7 +24,7 @@ daemon = Pyro4.Daemon()
 uri = daemon.register(Calculator)
 
 # Print the uri so we can use it in the client later
-print("Ready. Object uri =", uri)
+print(f"[bold green]The object's uri is:[/bold green] {uri}")
 
 # Start the event loop of the server to wait for calls
 daemon.requestLoop()

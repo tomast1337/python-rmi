@@ -8,10 +8,11 @@ print = rich.print
 input = Prompt.ask
 
 # Get the uri of the server object
-uri = input("Enter the uri of the server object: ")
+uri = input("[bold green]Enter the uri of the server object:[/bold green]")
 
 if uri == "":
-    print("No uri entered, exiting...")
+    print("[bold red]No uri provided[/bold red]")
+    print("[bold red]Exiting...[/bold red]")
     exit()
 
 # Create a Pyro proxy to the server object
@@ -25,5 +26,5 @@ while(entrada != "exit"):
     if(entrada != "exit"):
         print(f"{entrada} = {eval.eval(entrada)}")
 
-print("Exiting...")
+print("[bold red]Exiting...[/bold red]")
 
